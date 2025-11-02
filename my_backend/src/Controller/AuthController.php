@@ -84,7 +84,7 @@ class AuthController extends AbstractController
             return new JsonResponse(['message'=>'invalid credentials'], 401);
         }
 
-        $token = $this->jwt->generate(['sub' => $user->getId(), 'email'=>$user->getEmail()]);
-        return new JsonResponse(['token' => $token]);
+        $token = $this->jwt->generate(['sub' => $user->getId(), 'email'=> $user->getEmail()]);
+        return new JsonResponse(['token' => $token], 201);
     }
 }

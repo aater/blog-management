@@ -4,10 +4,12 @@ namespace App\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 #[ODM\Document(collection: "users")]
 #[ODM\Index(keys: ["email" => "asc"], options: ["unique" => true])]
-class User
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ODM\Id]
     private ?string $id = null;
@@ -61,7 +63,23 @@ class User
     public function setPassword(string $pw): self
     {
         $this->password = $pw;
-        
+
         return $this;
+    }
+
+    public function getUserIdentifier(): string
+    {
+        return $this->email ?? '';
+    }
+
+    public function getRoles(): array
+    {
+       
+        return ['ROLE_USER'];
+    }
+
+    public function eraseCredentials(): void
+    {
+        
     }
 }
