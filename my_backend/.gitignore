@@ -1,0 +1,26 @@
+### Symfony ###
+/var/
+/vendor/
+/node_modules/
+/public/bundles/
+/.env.local
+/.env.local.php
+/.env.*.local
+/.env.test
+/.phpunit.result.cache
+
+### Logs and cache ###
+/var/log/*
+/var/cache/*
+/var/test/
+/var/tmp/
+
+### IDE ###
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+### Composer ###
+composer.lock
+composer.phar

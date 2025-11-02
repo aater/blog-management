@@ -1,0 +1,159 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8f9fc;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* --- Formulaire --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.addBtn,
+.saveBtn {
+  align-self: flex-end;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveBtn {
+  background-color: #48bb78;
+}
+
+.addBtn:hover {
+  background-color: #5a67d8;
+}
+
+.saveBtn:hover {
+  background-color: #38a169;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.articleCard {
+  background: #fdfdfd;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.2rem;
+  transition: box-shadow 0.2s;
+}
+
+.articleCard:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.articleTitle {
+  color: #2d3748;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.content {
+  margin-top: 0.8rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.editBtn,
+.deleteBtn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editBtn {
+  background-color: #667eea;
+}
+
+.editBtn:hover {
+  background-color: #5a67d8;
+}
+
+.deleteBtn {
+  background-color: #e53e3e;
+}
+
+.deleteBtn:hover {
+  background-color: #c53030;
+}
